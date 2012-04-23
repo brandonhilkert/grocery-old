@@ -14,7 +14,7 @@ module Grocery
 
   def self.redis
     @redis ||= (
-      url = URI(ENV['REDIS_URL'] || "redis://127.0.0.1:6379")
+      url = URI(ENV['REDISTOGO_URL'] || "redis://127.0.0.1:6379")
 
       base_settings = {
         host: url.host,
