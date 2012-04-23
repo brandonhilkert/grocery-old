@@ -1,0 +1,65 @@
+@import 'reset';
+@import 'mixins/css3';
+@import 'mixins/buttons';
+@import 'classes/buttons';
+@import 'classes/header';
+@import 'classes/lists';
+
+/* variables */
+$base_size: 20px;
+$label_size: 20px;
+
+html, body {
+  height: 100%;
+}
+
+/* basic setup */
+body {
+  color: rgb(52,52,52);
+  font-family: helvetica, arial, freesans, clean, sans-serif;
+  font-size: $base_size;
+  line-height: $base_size*1.618;
+}
+
+a {
+  color: rgb(52,52,52);
+  text-decoration: none;
+}
+
+#container {
+  width: 400px;
+  margin: 20px auto;
+  position: relative;
+  min-height: 500px;
+  border: 1px solid rgb(150,150,150);
+  @include border-radius(5px);
+}
+
+@media all and (max-width: 400px) {
+
+  #container {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100%;
+    @include border-radius(0px);
+  }
+
+  header {
+    font-size: 20px;
+    line-height: 20px*1.618;
+  }
+
+  #addItem input[type=text] {
+    width: 75%;
+  }
+
+  .lists {
+    padding-bottom: 30px;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+

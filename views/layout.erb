@@ -1,0 +1,33 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery</title>
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="<%= asset_path('application.css') %>" type="text/css" media="screen">
+    <script src="<%= asset_path('application.js') %>"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Grocery.me</h1>
+      </header>
+      <div class="lists">
+        <%= yield %>
+      </div>
+      <footer>
+        <a href="http://twitter.com/brandonhilkert" target="_blank">@brandonhilkert</a>
+      </footer>
+    </div>
+  </body>
+</html>

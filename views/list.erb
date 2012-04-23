@@ -1,0 +1,30 @@
+<form id="addItem" action="/lists/<%= @id %>/item" method="post">
+  <input type="text" name="item">
+  <input type="submit" value="Add" class="button">
+</form>
+
+<div class="list">
+  <% if !@items.empty? %>
+      <ul class="item">
+        <% @items.each do |item| %>
+          <li>
+            <%= item %>
+            <form action="/lists/<%= @id %>/item" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <input type="hidden" name="item" value="<%= item %>">
+              <input type="submit" value="Delete" class="button destroy">
+            </form>
+          </li>
+        <% end %>
+      </ul>
+
+    <form action="/lists/<%= @id %>/clear" method="post">
+      <input type="submit" value="Clear All" class="button destroy-all">
+    </form>
+
+  <% else %>
+    <div class="no-data">
+      No items found
+    </div>
+  <% end %>
+</div>
