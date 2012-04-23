@@ -26,10 +26,11 @@
 }
 
 .list {
-  ul.item {
+  ul.items {
     margin-bottom: 20px;
 
     li {
+      cursor: pointer;
       margin-bottom: 5px;
 
       form {

@@ -26,6 +26,11 @@ a {
   text-decoration: none;
 }
 
+.cross-off {
+  text-decoration: line-through;
+  color: rgb(150,150,150);
+}
+
 #container {
   width: 400px;
   margin: 20px auto;
